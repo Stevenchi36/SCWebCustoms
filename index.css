@@ -11,11 +11,21 @@ body{
     max-width: 100vw;
     background-repeat: no-repeat;
     opacity: 0.9;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .bannerTitle{
     color: white;
@@ -27,7 +37,18 @@ body{
     margin-bottom: 0px;
     text-transform: uppercase;
     padding: 30px;
-    animation: appearUp .5s linear .2s forwards;
+    -webkit-animation: appearUp .5s linear .2s forwards;
+            animation: appearUp .5s linear .2s forwards;
+}
+@-webkit-keyframes appearUp{
+    from{
+        opacity: 0;
+        margin-bottom: -20px;
+    }
+    to{
+        opacity: 0.9;
+        margin-bottom: 40px;
+    }
 }
 @keyframes appearUp{
     from{
@@ -45,23 +66,35 @@ body{
     border-radius: 5px;
     outline: none;
     position: relative;
-    box-shadow: 0px 6px #CBDBD7;
+    -webkit-box-shadow: 0px 6px #CBDBD7;
+            box-shadow: 0px 6px #CBDBD7;
     padding: 25px 30px;
     font-weight: bold;
     opacity: 0;
     text-transform: uppercase;
-    animation: appearLate .5s linear .7s forwards;
+    -webkit-animation: appearLate .5s linear .7s forwards;
+            animation: appearLate .5s linear .7s forwards;
     cursor: pointer;
 }
 .contactBTN:hover{
-    box-shadow: 0px 4px #CBDBD7;
+    -webkit-box-shadow: 0px 4px #CBDBD7;
+            box-shadow: 0px 4px #CBDBD7;
     margin-bottom: -2px;
     margin-top: 2px;
 }
 .contactBTN:active{
-    box-shadow: 0px 0px #CBDBD7;
+    -webkit-box-shadow: 0px 0px #CBDBD7;
+            box-shadow: 0px 0px #CBDBD7;
     margin-bottom: -6px;
     margin-top: 6px;
+}
+@-webkit-keyframes appearLate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 @keyframes appearLate{
     from{
@@ -77,9 +110,13 @@ body{
     background-color: #3E606F;
     background-color: #91aab4;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233e606f' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 40px 50px 50px 50px;
     color: #193441;
 }
@@ -90,17 +127,28 @@ body{
     text-shadow: 0px 0px 15px #fcfff5;
 }
 .howTo .title{
-    flex: 1 1 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
     text-align: center;
     font-size: 40px;
     margin-top: 15px;
     margin-bottom: 30px;
 } 
 .howTo .step{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
     text-align: center;
     margin: 20px;
 }
@@ -112,22 +160,40 @@ body{
 
 /* CONTACT ME */
 .contactMe{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: #fcfff5;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbdbd7' fill-opacity='0.18' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 .contactForm{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .contactMe .title{
     font-size: 40px;
-    flex: 0 1 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     text-align: center;
     margin: 30px 0;
 }
@@ -147,7 +213,8 @@ body{
     margin-bottom: 20px;
 }
 .contactMe input:focus, .contactMe .ideasInput:focus{
-    box-shadow: 0px 0px 8px #3E606F;
+    -webkit-box-shadow: 0px 0px 8px #3E606F;
+            box-shadow: 0px 0px 8px #3E606F;
 }
 .contactMe button{
     margin-bottom: 30px;
@@ -157,17 +224,20 @@ body{
     border: 1px solid #193441;
     border-radius: 5px;
     outline: none;
-    box-shadow: 0px 4px #193441;
+    -webkit-box-shadow: 0px 4px #193441;
+            box-shadow: 0px 4px #193441;
     position: relative;
     cursor: pointer;
 }
 .contactMe button:hover{
-    box-shadow: 0px 3px #193441;
+    -webkit-box-shadow: 0px 3px #193441;
+            box-shadow: 0px 3px #193441;
     margin-bottom: 29px;
     margin-top: 1px;
 }
 .contactMe button:active{
-    box-shadow: 0px 1px #193441;
+    -webkit-box-shadow: 0px 1px #193441;
+            box-shadow: 0px 1px #193441;
     margin-bottom: 27px;
     margin-top: 3px;
 }
@@ -181,15 +251,23 @@ body{
 
 /* ABOUT ME */
 .aboutMe{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 40px 10px;
     background-color: #cbdbd7;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%2391aab4' fill-opacity='0.2'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 .aboutMe .title{
-    flex: 0 1 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     font-size: 40px;
     text-align: center;
     margin-bottom: 30px;
@@ -200,7 +278,8 @@ body{
     margin-bottom: 20px;
 }
 .aboutMe .info{
-    flex-basis: 500px;
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
     text-align: justify;
     margin: 0 15px;
     margin-bottom: 20px;
@@ -208,14 +287,23 @@ body{
 
 /* FOOTER */
 .footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: #fcfff5;
     padding: 0 5px;
 }
 .links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .link{
     margin: 5px 10px;
@@ -224,11 +312,17 @@ a{
     text-decoration: none;
 }
 .dateName{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .dateName .item{
-    flex: 0 0 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
 }
 .dateName .name{
     text-align: left;
@@ -244,23 +338,39 @@ a{
 }
 @media (max-width: 625px){
     .footer{
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding-top: 10px;
     }
     .links{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .dateName{
-        flex-direction: column;
-        justify-content: start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
     }
     .dateName .item{
         margin: 5px 10px;
     }
     .dateName .item{
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
     }
     .dateName .name{
         text-align: right;
