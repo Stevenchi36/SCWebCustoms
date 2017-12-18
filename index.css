@@ -171,6 +171,13 @@ body{
     margin-bottom: 27px;
     margin-top: 3px;
 }
+@media (max-width: 450px){
+
+    .contactMe input, .contactMe textarea{
+        width: 325px;
+    }
+
+}
 
 /* ABOUT ME */
 .aboutMe{
