@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SC Custom Websites</title>
+    <meta name="description" content="Short description">
+    <meta name="author" content="Steven Childrey">
+
+    <!-- Facebook / OpenGraph -->
+    <meta property="og:url"                 content="http://www.example.com" />
+    <meta property="og:title"               content="Website page title" />
+    <meta property="og:description"         content="A brief description of the content" />
+    <meta property="og:site_name"           content="Example" />
+    <meta property="og:image"               content="http://www.example.com/image.jpg" />
+    <meta property="fb:app_id"              content="000000" />  <!-- Used for Domain Insights -->
+    <meta property="og:type"                content="website" /> <!-- website is deafult -->
+    <meta property="og:locale"              content="en_US" />   <!-- en_US is deafult -->
+
+    <!-- Twitter Cards-->
+    <meta name="twitter:card"               content="summary">
+    <meta name="twitter:site"               content="@your_sites_username">
+    <meta name="twitter:title"              content="Page Title">
+    <meta name="twitter:description"        content="Page description less than 200 characters">
+    <meta name="twitter:image"              content="http://www.example.com/image.jpg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/30780cec76.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="fixAlert.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="path/to/favicon.ico" sizes="32x32" type="image/png">
+    <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="bannerImg">
+            <div class="bannerTitle"><h1>Every great business deserves a great website!</h1></div>
+            <a href="#contactMe"><button class="contactBTN">Contact me!</button></a>
+        </div>
+    </header>
+    <section class="howTo" id="howTo">
+        <h1 class="title">How it works</h1>
+        <div class="step stepOne">
+            <i class="icon fa fa-envelope-open fa-5x"></i>
+            <p class="stepTitle">Step 1: Communicate</p>
+            <p class="info">Send your ideas about how you want your site to look, including images, text, and colors!</p>
+        </div>
+        <div class="step stepTwo">
+            <i class="icon fa fa-list-alt fa-5x"></i>
+            <p class="stepTitle">Step 2: Draft</p>
+            <p class="info">I will create a draft of the site using your ideas! This could take anywhere from a day to a few weeks depending on the complexity.</p>
+        </div>
+        <div class="step stepThree">
+            <i class="icon fa fa-search fa-5x"></i>
+            <p class="stepTitle">Step 3: Review</p>
+            <p class="info">I will send you the draft and you can review it and tell me what changes you would like to be made.</p>
+        </div>
+        <div class="step stepFour">
+            <i class="icon fa fa-check fa-5x"></i>
+            <p class="stepTitle">Step 4: Final Product</p>
+            <p class="info">Final changes will be made and I can send you the website, or put it up myself!</p>
+        </div>
+    </section>
+    <section class="contactMe" id="contactMe">
+        <h1 class="title">Contact Me</h1>
+        <form method="POST" action="http://formspree.io/SCWebCustoms@gmail.com" class="contactForm">
+            <input type="text" name="Name" placeholder="Full Name">
+            <input type="email" name="Email" placeholder="Email">
+            <textarea class="ideasInput" name="Comments" placeholder="Enter your ideas, questions, or concerns!"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section class="aboutMe" id="aboutMe">
+        <h1 class="title">About Me</h1>
+        <div class="profilePic">
+            <img class='selfie' src="selfPhoto.jpg" alt="Image of Steven">
+        </div>
+        <div class="info">Hey, I'm Steven Childrey. Currently, I am 23 and in my senior year at Radford University with a major in Information Science and Systems and a concentration in Web Development. In my free time I'm either at the gym lifting weights, working on personal web projects, or playing Rocket League or Fortnite on Playstation 4. What initailly got me into web development was graphic design. I loved trying to make logos or edit images in photoshop and graphic design is what I initially went to university for. I quickly found out that wasn't a great artist, and then I found web development. I liked this because it was similar to graphic design. I got to pick and chose where things go and then figure out how to get them there! After a bit, the rest of the programming aspect started to interest me, so I now love both front end and back end web development!</div>
+    </section>
+    <footer class="footer">
+        <div class="links">
+            <a href="#header"><p class="link">Top</p></a>
+            <a href="#howTo"><p class="link">How it works</p></a>
+            <a href="#contactMe"><p class="link">Contact Me</p></a>
+            <a href="#aboutMe"><p class="link">About Me</p></a>
+        </div>
+        <div class="dateName">
+            <p class="item name">Steven Childrey</p>
+            <p class="item email">SCWebCustoms@gmail.com</p>
+            <p class="item date"><i class="fa fa-pencil fa-lg"></i> 12/12/2017</p>
+        </div>
+    </footer>
+    <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>
