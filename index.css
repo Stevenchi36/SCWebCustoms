@@ -274,7 +274,7 @@ body{
 .aboutMe .selfie{
     border-radius: 50%;
     margin: 0 25px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .aboutMe .info{
     -ms-flex-preferred-size: 500px;
